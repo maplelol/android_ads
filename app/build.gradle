@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 28
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -61,8 +61,8 @@ dependencies {
     implementation 'com.mopub.mediation:facebookaudiencenetwork:5.0.0.0'
 
 // ironSource
-    //implementation 'com.ironsource.sdk:mediationsdk:6.7.11@jar'
-    //implementation 'com.mopub.mediation:ironsource:6.7.11.0'
+    implementation 'com.ironsource.sdk:mediationsdk:6.7.11@jar'
+    implementation 'com.mopub.mediation:ironsource:6.7.11.0'
 // Chartboost
 // This mediated network SDK is not available on JCenter. Ensure you have downloaded and imported it manually into your app project.
     //implementation 'com.mopub.mediation:chartboost:7.2.0.0'
