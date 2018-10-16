@@ -28,10 +28,8 @@ repositories {
         url 'https://maven.google.com/'
         name 'Google'
     }
-    maven {
-        url "https://s3.amazonaws.com/moat-sdk-builds"
-    }
-    maven { url 'https://dl.bintray.com/ironsource-mobile/android-sdk'}
+    maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
+    maven { url 'https://dl.bintray.com/ironsource-mobile/android-sdk' }
     flatDir {
         dirs 'libs', './libs'
     }
