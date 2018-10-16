@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <com.facebook.ads.AdIconView
+            android:id="@+id/native_ad_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/native_ad_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="Title"
+                android:textColor="@color/xad_white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/native_ad_social_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ad_choices_container"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xad_black_ad_tag"
+            android:clickable="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.facebook.ads.MediaView
+        android:id="@+id/native_ad_media"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:gravity="center">
+
+    </com.facebook.ads.MediaView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/native_ad_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:lines="3"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/native_ad_call_to_action"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#4286F4"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>
