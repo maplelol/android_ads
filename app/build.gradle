@@ -28,6 +28,10 @@ repositories {
         url 'https://maven.google.com/'
         name 'Google'
     }
+    maven {
+        url "https://s3.amazonaws.com/moat-sdk-builds"
+    }
+    maven { url 'https://dl.bintray.com/ironsource-mobile/android-sdk'}
     flatDir {
         dirs 'libs', './libs'
     }
@@ -61,5 +65,5 @@ dependencies {
     implementation 'com.mopub.mediation:ironsource:6.7.11.0'
 // Chartboost
 // This mediated network SDK is not available on JCenter. Ensure you have downloaded and imported it manually into your app project.
-    implementation 'com.mopub.mediation:chartboost:7.2.0.0'
+    //implementation 'com.mopub.mediation:chartboost:7.2.0.0'
 }
