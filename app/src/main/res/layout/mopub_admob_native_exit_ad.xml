@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/xad_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/xad_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/xad_white"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/xad_black_ad_tag" />
+
+        <ImageView
+            android:id="@+id/xad_privacy_ad_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+
+    </LinearLayout>
+
+    <com.mopub.nativeads.MediaLayout
+        android:id="@+id/xad_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+    </com.mopub.nativeads.MediaLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/xad_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="3"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/xad_cta"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#4286F4"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>
