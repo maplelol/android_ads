@@ -1,5 +1,19 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'maven'
+uploadArchives{
+    repositories.mavenDeployer{
+        // 本地仓库路径
+        repository(url:"file:///Users/chd/.m2/repository/")
+        // 唯一标识
+        pom.groupId = "com.etec.game"
+        // 项目名称
+        pom.artifactId = "ads-mopub-mediation"
+        // 版本号
+        pom.version = "1.0.0"
+    }
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {

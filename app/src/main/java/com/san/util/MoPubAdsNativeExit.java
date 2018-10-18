@@ -83,7 +83,7 @@ public class MoPubAdsNativeExit implements AdListener,View.OnClickListener,View.
                     .build());
             this.mAd.registerAdRenderer(fbAdRender);
 
-            GooglePlayServicesAdRenderer googlePlayServicesAdRenderer = new GooglePlayServicesAdRenderer(new MediaViewBinder.Builder(R.layout.mopub_native_exit_ad)
+            GooglePlayServicesAdRenderer googlePlayServicesAdRenderer = new GooglePlayServicesAdRenderer(new MediaViewBinder.Builder(R.layout.mopub_admob_native_exit_ad)
                     .mediaLayoutId(R.id.xad_media)
                     .iconImageId(R.id.xad_icon)
                     .titleId(R.id.xad_title)

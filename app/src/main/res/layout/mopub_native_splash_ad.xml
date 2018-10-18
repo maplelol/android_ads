@@ -70,7 +70,7 @@
                         android:textColor="@color/xad_grey"
                         android:textSize="10sp" />
 
-                    <com.mopub.nativeads.MediaLayout
+                    <ImageView
                         android:id="@+id/xad_media"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"

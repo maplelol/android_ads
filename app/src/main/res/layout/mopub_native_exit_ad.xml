@@ -45,13 +45,13 @@
 
     </LinearLayout>
 
-    <com.mopub.nativeads.MediaLayout
+    <ImageView
         android:id="@+id/xad_media"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
 
-    </com.mopub.nativeads.MediaLayout>
+    </ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"

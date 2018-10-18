@@ -71,7 +71,7 @@ public class MoPubAdsNativeSplash implements View.OnClickListener,View.OnTouchLi
                     .build());
             this.mAd.registerAdRenderer(fbAdRender);
 
-            GooglePlayServicesAdRenderer googlePlayServicesAdRenderer = new GooglePlayServicesAdRenderer(new MediaViewBinder.Builder(R.layout.mopub_native_splash_ad)
+            GooglePlayServicesAdRenderer googlePlayServicesAdRenderer = new GooglePlayServicesAdRenderer(new MediaViewBinder.Builder(R.layout.mopub_admob_native_splash_ad)
                     .mediaLayoutId(R.id.xad_media)
                     .iconImageId(R.id.xad_icon)
                     .titleId(R.id.xad_title)
