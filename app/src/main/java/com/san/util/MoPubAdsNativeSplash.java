@@ -1,7 +1,11 @@
 package com.san.util;
 
+import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -103,6 +107,9 @@ public class MoPubAdsNativeSplash implements View.OnClickListener,View.OnTouchLi
             // Set the native event listeners (onImpression, and onClick).
             v.findViewById(R.id.btn_close_native_ad).setOnClickListener(this);
             SplashAds.addAdView(v);
+
+            AdsUtil.setViewClickable(v.findViewById(R.id.xad_icon),false);
+            AdsUtil.setViewClickable(v.findViewById(R.id.xad_media),false);
 
             this.onStatusUpdate("show");
         }

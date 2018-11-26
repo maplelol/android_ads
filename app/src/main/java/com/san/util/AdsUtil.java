@@ -2,6 +2,8 @@ package com.san.util;
 
 import android.app.Activity;
 import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import java.util.concurrent.Callable;
@@ -51,6 +53,18 @@ public class AdsUtil {
         //ExportJavaFunction.CallBackToJS(obj,cb,arg);
         if (mScriptCb != null) {
             mScriptCb.call(obj,cb,arg);
+        }
+    }
+
+
+
+    public static void setViewClickable(View v, boolean e) {
+        v.setClickable(e);
+        if (v instanceof ViewGroup) {
+            ViewGroup vg = ((ViewGroup) v);
+            for (int i = 0; i < vg.getChildCount(); i++) {
+                setViewClickable(vg.getChildAt(i),e);
+            }
         }
     }
 }

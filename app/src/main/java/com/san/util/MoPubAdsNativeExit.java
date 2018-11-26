@@ -129,6 +129,14 @@ public class MoPubAdsNativeExit implements AdListener,View.OnClickListener,View.
             frameLayout.removeAllViews();
             frameLayout.addView(v);
 
+            if (v.findViewById(R.id.xad_icon) != null) {
+                AdsUtil.setViewClickable(v.findViewById(R.id.xad_icon),false);
+                AdsUtil.setViewClickable(v.findViewById(R.id.xad_media),false);
+            } else {
+                AdsUtil.setViewClickable(v.findViewById(R.id.native_ad_icon),false);
+                AdsUtil.setViewClickable(v.findViewById(R.id.native_ad_media),false);
+            }
+
             this.onStatusUpdate("show");
         }
     }
