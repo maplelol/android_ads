@@ -1,6 +1,5 @@
 package com.san.util;
 
-import com.ironsource.mediationsdk.IronSource;
 import com.mopub.common.MoPub;
 import com.mopub.common.SdkConfiguration;
 import com.mopub.common.SdkInitializationListener;

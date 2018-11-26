@@ -1,19 +1,5 @@
 apply plugin: 'com.android.library'
 
-apply plugin: 'maven'
-uploadArchives{
-    repositories.mavenDeployer{
-        // 本地仓库路径
-        repository(url:"file:///Users/chd/.m2/repository/")
-        // 唯一标识
-        pom.groupId = "com.etec.game"
-        // 项目名称
-        pom.artifactId = "ads-mopub-mediation"
-        // 版本号
-        pom.version = "1.0.0"
-    }
-}
-
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -38,12 +24,7 @@ android {
 
 repositories {
     jcenter()
-    maven {
-        url 'https://maven.google.com/'
-        name 'Google'
-    }
-    maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
-    maven { url 'https://dl.bintray.com/ironsource-mobile/android-sdk' }
+    maven { url 'https://maven.google.com/' }
     flatDir {
         dirs 'libs', './libs'
     }
@@ -51,30 +32,42 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation (name:'mopub-sdk-5.4.0', ext:'aar')
+    implementation (name:'mopub-sdk-base-5.4.0', ext:'aar')
+    implementation (name:'mopub-sdk-interstitial-5.4.0', ext:'aar')
+    implementation (name:'mopub-sdk-native-static-5.4.0', ext:'aar')
+    implementation (name:'mopub-sdk-native-video-5.4.0', ext:'aar')
+    implementation (name:'mopub-sdk-rewardedvideo-5.4.0', ext:'aar')
+    implementation (name:'play-services-ads-17.0.0', ext:'aar')
+    implementation (name:'play-services-ads-base-17.0.0', ext:'aar')
+    implementation (name:'play-services-ads-lite-17.0.0', ext:'aar')
+    implementation (name:'AudienceNetwork', ext:'aar')
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:25.3.1'
+
 
     //Facebook
     implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
 
     //MoPub
-    implementation ('com.mopub:mopub-sdk:5.4.0@aar') {
-        transitive = true
-    }
+//    implementation ('com.mopub:mopub-sdk:5.4.0@aar') {
+//        transitive = true
+//    }
 // AppLovin
-    implementation 'com.applovin:applovin-sdk:8.1.4'
-    implementation 'com.mopub.mediation:applovin:8.1.4.0'
+    //implementation 'com.applovin:applovin-sdk:8.1.4'
+    //implementation 'com.mopub.mediation:applovin:8.1.4.0'
 
 // Google (AdMob)
-    implementation 'com.google.android.gms:play-services-ads:15.0.1'
-    implementation 'com.mopub.mediation:admob:15.0.1.0'
+    //implementation 'com.google.android.gms:play-services-ads:17.0.0'
+    //implementation 'com.mopub.mediation:admob:17.0.0.2'
 
 // Facebook Audience Network
-    implementation 'com.facebook.android:audience-network-sdk:5.0.0'
-    implementation 'com.mopub.mediation:facebookaudiencenetwork:5.0.0.0'
+    //implementation 'com.facebook.android:audience-network-sdk:5.1.0'
+    //implementation 'com.mopub.mediation:facebookaudiencenetwork:5.1.0.0'
 
 // ironSource
-    implementation 'com.ironsource.sdk:mediationsdk:6.7.11@jar'
-    implementation 'com.mopub.mediation:ironsource:6.7.11.0'
+    //implementation 'com.ironsource.sdk:mediationsdk:6.7.11@jar'
+    //implementation 'com.mopub.mediation:ironsource:6.7.11.0'
 // Chartboost
 // This mediated network SDK is not available on JCenter. Ensure you have downloaded and imported it manually into your app project.
     //implementation 'com.mopub.mediation:chartboost:7.2.0.0'
